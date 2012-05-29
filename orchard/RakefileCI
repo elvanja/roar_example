@@ -1,0 +1,26 @@
+require 'rspec/core/rake_task'
+require 'ci/reporter/rake/rspec'
+
+def reporting_root
+  'reports'
+end
+
+task :clean_up do
+  rm_rf reporting_root
+end
+
+RSpec::Core::RakeTask.new(:rspec) do |spec|
+  ENV["COVERAGE"] = "on"
+  ENV["SPEC_OPTS"] = "--format documentation --color"
+  spec.pattern = 'spec'
+end
+
+task :setup_ci_reporter do |ci_reporter|
+  ENV["CI_REPORTS"] = reporting_root + '/rspec'
+end
+
+task :setup_rspec_reporting => [:setup_ci_reporter, "ci:setup:rspec"]
+
+task :ci => [:clean_up, :setup_rspec_reporting, :rspec]
+
+task :default => :ci

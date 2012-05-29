@@ -1,0 +1,23 @@
+*.gem
+*.rbc
+.bundle
+.config
+coverage
+InstalledFiles
+pkg
+rdoc
+reports
+tmp
+version_tmp
+tmp
+
+# YARD artifacts
+.yardoc
+_yardoc
+doc/
+
+*swp
+*swo
+tags
+*vim
+reports
