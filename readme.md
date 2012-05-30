@@ -15,6 +15,7 @@ The main idea is to show how one might use those libraries to build such a syste
 ## Run
 
 start tutti\_frutti service by running: bundle exec rails s -p 9292
-srart smoothie\_mixer client by running: bundle exec rails s
+
+start smoothie\_mixer client by running: bundle exec rails s
 
 that should be it :-)
