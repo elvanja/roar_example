@@ -15,6 +15,12 @@ module Orcharding
     end
 
     class << self
+      def all
+        repository.all.map do |data|
+          new_from_hash data
+        end
+      end
+
       def find_by_id(id)
         new_from_hash repository.find_by_id(id)
       end

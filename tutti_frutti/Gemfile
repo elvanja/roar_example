@@ -7,8 +7,6 @@ gem 'rails', '3.2.3'
 
 gem 'rails-api'
 
-
-
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
@@ -25,3 +23,14 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
+
+gem 'roar'
+gem 'roar-rails'
+
+%w(
+  book_of_orcharding
+  orchard
+).each do |dependency|
+  gem dependency, :path => File.expand_path("../../#{dependency}", __FILE__)
+end
+

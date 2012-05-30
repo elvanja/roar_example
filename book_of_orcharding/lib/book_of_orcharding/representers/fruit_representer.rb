@@ -6,6 +6,7 @@ module Orcharding
     include Roar::Representer::JSON
     include Roar::Representer::Feature::Hypermedia
 
+    #TODO can this be a one liner?
     property :id
     property :name
     property :taste

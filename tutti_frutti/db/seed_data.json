@@ -1,0 +1,19 @@
+[
+  {"fruit":[
+    {"id": "1", "name": "Apple", "taste": "sweet"},
+    {"id": "2", "name": "Orange", "taste": "bitter"},
+    {"id": "3", "name": "Lemon", "taste": "bitter"},
+    {"id": "4", "name": "Pineapple", "taste": "sweet"},
+    {"id": "5", "name": "Blackcurrant", "taste": "sour"},
+    {"id": "6", "name": "Redcurrant", "taste": "sour"},
+    {"id": "7", "name": "Strawberry", "taste": "sweet"},
+    {"id": "8", "name": "Grapefruit", "taste": "bitter"},
+    {"id": "9", "name": "Tangerine", "taste": "sweet"},
+    {"id": "10", "name": "Apricot", "taste": "sweet"},
+    {"id": "11", "name": "Kiwi", "taste": "sour"},
+    {"id": "12", "name": "Mango", "taste": "sweet"},
+    {"id": "13", "name": "Fig", "taste": "sweet"},
+    {"id": "14", "name": "Tomato", "taste": "funny"},
+    {"id": "15", "name": "Pear", "taste": "sweet"}
+  ]}
+]

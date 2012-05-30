@@ -14,6 +14,16 @@ module Orcharding
     end
 
     context "finding fruits" do
+      it "finds all fruit" do
+        fruits_array = [
+          {id: 1, name: 'Apple', taste: 'sweet'},
+          {id: 2, name: 'Banana', taste: 'sweet'},
+          {id: 3, name: 'Pineapple', taste: 'sweet'}
+        ]
+        repository.should_receive(:all).and_return(fruits_array)
+        assert_fruits Fruit.all, fruits_array
+      end
+
       it "finds by id" do
         fruit_hash = {id: 100, name: 'Apple', taste: 'sweet'}
         repository.should_receive(:find_by_id).with(100).and_return(fruit_hash)
