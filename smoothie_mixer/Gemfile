@@ -44,13 +44,15 @@ end
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
-gem 'roar'
-gem 'roar-rails'
+#gem 'roar'
+#gem 'roar-rails'
 gem 'faraday'
 
 %w(
   book_of_orcharding
   orchard
+  roar
+  roar-rails
 ).each do |dependency|
   gem dependency, :path => File.expand_path("../../#{dependency}", __FILE__)
 end
