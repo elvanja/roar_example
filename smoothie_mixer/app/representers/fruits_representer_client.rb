@@ -9,8 +9,8 @@ class FruitsRepresenterClient
     transport_engine = Roar::Representer::Transport::Faraday
   end
 
-  def represented_fruit
-    fruit.each do |fruit|
+  def represented_fruits
+    fruits.each do |fruit|
       class << fruit
         extend ActiveModel::Naming
         include ActiveModel::Conversion

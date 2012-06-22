@@ -14,7 +14,7 @@ module Orcharding
     link :self do
       #TODO enable links to use serving app routing
       #how do I make representer be in gem and have links like this
-      "http://localhost:9292/fruit/#{self.id}"
+      "http://localhost:9292/fruits/#{self.id}"
     end
   end
 end

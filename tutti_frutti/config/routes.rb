@@ -1,5 +1,5 @@
 TuttiFrutti::Application.routes.draw do
-  resources :fruit
+  resources :fruits
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -50,7 +50,7 @@ TuttiFrutti::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'fruit#index'
+  root :to => 'fruits#index'
 
   # See how all your routes lay out with "rake routes"
 
