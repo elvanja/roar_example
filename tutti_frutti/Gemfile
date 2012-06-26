@@ -25,7 +25,7 @@ gem 'jquery-rails'
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
 gem 'roar'
-gem 'roar-rails'
+gem 'roar-rails', ">= 0.0.8"
 
 %w(
   book_of_orcharding

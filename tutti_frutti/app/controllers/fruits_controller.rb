@@ -1,7 +1,7 @@
 class FruitsController < ApplicationController
   include Roar::Rails::ControllerAdditions
-  respond_to :json
-
+  represents :json, Orcharding::Fruit
+  
   def index
     respond_with Orcharding::Fruit.all, represent_with: Orcharding::FruitsRepresenter
   end

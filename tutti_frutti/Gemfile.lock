@@ -1,11 +1,11 @@
 PATH
-  remote: /home/elvanja/projects/roar-example/book_of_orcharding
+  remote: /home/nick/projects/roar_example/book_of_orcharding
   specs:
     book_of_orcharding (0.0.1)
       roar
 
 PATH
-  remote: /home/elvanja/projects/roar-example/orchard
+  remote: /home/nick/projects/roar_example/orchard
   specs:
     orchard (0.0.1)
 
@@ -116,7 +116,7 @@ GEM
       nokogiri
     roar (0.11.2)
       representable (>= 1.2.2)
-    roar-rails (0.0.7)
+    roar-rails (0.0.8)
       actionpack (~> 3.0)
       railties (~> 3.0)
       roar (~> 0.10)
@@ -166,5 +166,5 @@ DEPENDENCIES
   rails (= 3.2.3)
   rails-api
   roar
-  roar-rails
+  roar-rails (>= 0.0.8)
   rspec-rails
