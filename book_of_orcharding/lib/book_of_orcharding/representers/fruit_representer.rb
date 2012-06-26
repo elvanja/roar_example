@@ -3,8 +3,7 @@ require 'roar/representer/feature/hypermedia'
 
 module Orcharding
   module FruitRepresenter
-    include Roar::Representer::JSON
-    include Roar::Representer::Feature::Hypermedia
+    include Roar::Representer::JSON::HAL
 
     #TODO can this be a one liner?
     property :id
