@@ -34,3 +34,7 @@ gem 'roar-rails'
   gem dependency, :path => File.expand_path("../../#{dependency}", __FILE__)
 end
 
+group :test do
+  gem 'rspec-rails'
+  gem 'cucumber-rails', require: false
+end

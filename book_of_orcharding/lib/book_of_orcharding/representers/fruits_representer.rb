@@ -5,9 +5,9 @@ module Orcharding
     include Roar::Representer::JSON
     include Roar::Representer::Feature::Hypermedia
 
-    collection :fruit, :extend => FruitRepresenter, :class => Fruit
+    collection :fruits, :extend => FruitRepresenter, :class => Fruit
 
-    def fruit
+    def fruits
       collect
     end
   end

@@ -6,7 +6,7 @@
       %th= 'Taste'
       %th=t '.actions', :default => t("helpers.actions")
   %tbody
-    - @fruit.each do |fruit|
+    - @fruits.each do |fruit|
       %tr
         %td= fruit.name
         %td= fruit.taste
