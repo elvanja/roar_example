@@ -11,9 +11,7 @@ module Orcharding
     property :taste
 
     link :self do
-      #TODO enable links to use serving app routing
-      #how do I make representer be in gem and have links like this
-      "http://localhost:9292/fruits/#{self.id}"
+      fruit_url(self.id)
     end
   end
 end
