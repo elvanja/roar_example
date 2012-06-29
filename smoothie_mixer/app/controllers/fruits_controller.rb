@@ -1,3 +1,6 @@
+require "book_of_orcharding/representers/fruit_representer"
+require "book_of_orcharding/representers/fruits_representer"
+
 class FruitsController < ApplicationController
   include Roar::Rails::ControllerAdditions
 
@@ -8,8 +11,8 @@ class FruitsController < ApplicationController
   end
 
   def edit
-    client = FruitRepresenterClient.new
+    client = Fruit.new
     client.get("http://localhost:9292/fruits/#{params[:id]}", 'application/json')
-    @fruit = client.represented_fruit
+    @fruit = client
   end
 end
