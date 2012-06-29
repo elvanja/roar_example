@@ -28,4 +28,6 @@ TuttiFrutti::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+  
+  config.representer.default_url_options = {:host => "localhost:9292"}
 end
