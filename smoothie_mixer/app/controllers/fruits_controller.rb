@@ -11,8 +11,6 @@ class FruitsController < ApplicationController
   end
 
   def edit
-    client = Fruit.new
-    client.get("http://localhost:9292/fruits/#{params[:id]}", 'application/json')
-    @fruit = client
+    @fruit = Fruit.get(params[:id], 'application/json')
   end
 end
