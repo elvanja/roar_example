@@ -5,12 +5,10 @@ class FruitsController < ApplicationController
   include Roar::Rails::ControllerAdditions
 
   def index
-    client = FruitsRepresenterClient.new
-    client.get("http://localhost:9292/fruits", 'application/json')
-    @fruits = client.represented_fruits
+    @fruits = ::Fruits.get("http://localhost:9292/fruits", 'application/json').fruits
   end
 
   def edit
-    @fruit = Fruit.get(params[:id], 'application/json')
+    @fruit = ::Fruit.get(params[:id], 'application/json')
   end
 end

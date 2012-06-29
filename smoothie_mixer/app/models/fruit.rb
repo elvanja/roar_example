@@ -12,9 +12,13 @@ class Fruit
     transport_engine = Roar::Representer::Transport::Faraday
     @persisted = true if @persisted.nil?
   end
+  
+  def id
+    links[:self].href
+  end
 
   def to_param
-    id
+    CGI::escape(id)
   end
 
   def self.from_param(param)
