@@ -48,10 +48,4 @@ gem 'roar'
 gem 'roar-rails'
 gem 'faraday'
 
-%w(
-  book_of_orcharding
-  orchard
-).each do |dependency|
-  gem dependency, :path => File.expand_path("../../#{dependency}", __FILE__)
-end
-
+gem "book_of_orcharding", :path => "../book_of_orcharding"
