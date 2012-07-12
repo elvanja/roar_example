@@ -4,11 +4,6 @@ PATH
     book_of_orcharding (0.0.1)
       roar
 
-PATH
-  remote: /home/elvanja/projects/roar-example/orchard
-  specs:
-    orchard (0.0.1)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -25,6 +20,9 @@ GEM
       rack-cache (~> 1.2)
       rack-test (~> 0.6.1)
       sprockets (~> 2.1.2)
+    active_attr (0.6.0)
+      activemodel (>= 3.0.2, < 4.1)
+      activesupport (>= 3.0.2, < 4.1)
     activemodel (3.2.3)
       activesupport (= 3.2.3)
       builder (~> 3.0.0)
@@ -149,13 +147,13 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_attr
   book_of_orcharding!
   coffee-rails (~> 3.2.1)
   faraday
   haml
   haml-rails
   jquery-rails
-  orchard!
   rails (= 3.2.3)
   roar
   roar-rails

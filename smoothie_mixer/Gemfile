@@ -49,3 +49,5 @@ gem 'roar-rails'
 gem 'faraday'
 
 gem "book_of_orcharding", :path => "../book_of_orcharding"
+
+gem 'active_attr'

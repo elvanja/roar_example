@@ -2,22 +2,14 @@ require 'roar/representer/feature/client'
 
 class Fruit
   include Roar::Representer::Feature::HttpVerbs
-
-  extend ActiveModel::Naming
-  include ActiveModel::Conversion
+  include ActiveAttr::Model
 
   def initialize(*)
     extend Orcharding::FruitRepresenter
     extend Roar::Representer::Feature::Client
     transport_engine = Roar::Representer::Transport::Faraday
-    @persisted = true if @persisted.nil?
   end
-  
-  # FIXME: why can't we override #id here?
-  def id
-    links[:self].href
-  end
-  
+
   def url
     links[:self].href
   end
@@ -28,14 +20,6 @@ class Fruit
 
   def self.from_param(param)
     find_by_id(param)
-  end
-
-  def persisted?
-    @persisted
-  end
-  
-  def errors
-    []
   end
 end
 
