@@ -13,12 +13,17 @@ class Fruit
     @persisted = true if @persisted.nil?
   end
   
+  # FIXME: why can't we override #id here?
   def id
+    links[:self].href
+  end
+  
+  def url
     links[:self].href
   end
 
   def to_param
-    CGI::escape(id)
+    CGI::escape(url)
   end
 
   def self.from_param(param)
