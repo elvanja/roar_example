@@ -1,4 +1,5 @@
-#TODO make fruit controller work with API too
-#class ApplicationController < ActionController::API
-class ApplicationController < ActionController::Base
+class ApplicationController < ActionController::API
+  # required for url helpers to work in Roar representer
+  # must be used here, if used in specific controller, representers don't work (unless explicit extend is used)
+  include ActionController::MimeResponds
 end
