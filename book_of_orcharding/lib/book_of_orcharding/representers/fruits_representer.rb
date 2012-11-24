@@ -1,4 +1,5 @@
 require 'roar/representer/json'
+require 'roar/representer/feature/hypermedia'
 
 module Orcharding
   module FruitsRepresenter

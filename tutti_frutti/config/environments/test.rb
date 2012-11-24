@@ -32,6 +32,7 @@ TuttiFrutti::Application.configure do
 
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
-  
+
+  # https://github.com/apotonick/roar-rails#url-helpers
   config.representer.default_url_options = {:host => "fru.it"}
 end

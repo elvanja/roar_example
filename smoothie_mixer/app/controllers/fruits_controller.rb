@@ -6,7 +6,8 @@ class FruitsController < ApplicationController
 
   def index
     @fruits = Fruits.get("http://localhost:9292/fruits", 'application/json').fruits
-    puts @fruits
+    #@fruits = Fruit.get("http://localhost:9292/fruits/2", 'application/json')
+    puts "===================="
     @fruits
   end
 

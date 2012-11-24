@@ -4,8 +4,8 @@ require 'roar/representer/feature/hypermedia'
 module Orcharding
   module FruitRepresenter
     include Roar::Representer::JSON::HAL
+    include Roar::Representer::Feature::Hypermedia
 
-    #TODO can this be a one liner?
     property :id
     property :name
     property :taste
