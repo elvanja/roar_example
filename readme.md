@@ -19,3 +19,7 @@ start tutti\_frutti service by running: bundle exec rails s -p 9292
 start smoothie\_mixer client by running: bundle exec rails s
 
 that should be it :-)
+
+# Resources
+
+[cherry favicon](http://www.favicon.cc/?action=icon&file_id=341263) courtesy of http://www.favicon.cc/

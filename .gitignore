@@ -26,3 +26,6 @@ reports
 roar
 roar-rails
 representable
+
+*.iml
+.idea/*

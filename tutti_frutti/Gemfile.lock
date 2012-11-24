@@ -1,11 +1,11 @@
 PATH
-  remote: /home/elvanja/projects/roar-example/book_of_orcharding
+  remote: /home/elvanja/projects/test/roar-example/book_of_orcharding
   specs:
     book_of_orcharding (0.0.1)
       roar
 
 PATH
-  remote: /home/elvanja/projects/roar-example/orchard
+  remote: /home/elvanja/projects/test/roar-example/orchard
   specs:
     orchard (0.0.1)
 
