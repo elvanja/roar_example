@@ -3,8 +3,9 @@ require "book_of_orcharding/representers/fruits_representer"
 
 class FruitsController < ApplicationController
   include Roar::Rails::ControllerAdditions
-  represents :json, Orcharding::Fruit
-  
+  include ActionController::MimeResponds
+  respond_to :json
+
   def index
     respond_with Orcharding::Fruit.all, represent_with: Orcharding::FruitsRepresenter
   end
