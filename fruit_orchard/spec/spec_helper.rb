@@ -20,15 +20,9 @@ if ENV["COVERAGE"]
 end
 # coverage setup end
 
-require "fruit_orchard"
-require 'book_of_orcharding'
-# require representers here, since they are not required in gem, see lib/book_of_orcharding.rb
-root = File.expand_path('../../lib', __FILE__)
-%w{representers}.each do |dir|
-  Dir["#{root}/book_of_orcharding/#{dir}/**/*.rb"].sort.each { |source| puts source; require source }
-end
+require 'fruit_orchard'
 
-require 'json_spec'
+Dir['./spec/matchers/**/*.rb'].sort.each { |matcher| require matcher }
 RSpec.configure do |config|
-  config.include JsonSpec::Helpers
+  config.include Matchers
 end

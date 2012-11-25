@@ -1,0 +1,32 @@
+PATH
+  remote: /home/elvanja/projects/test/roar-example/book_of_orcharding
+  specs:
+    book_of_orcharding (0.0.1)
+      roar
+
+PATH
+  remote: /home/elvanja/projects/test/roar-example/fruit_orchard
+  specs:
+    fruit_orchard (0.0.1)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    faraday (0.8.4)
+      multipart-post (~> 1.1)
+    json (1.7.5)
+    multipart-post (1.1.5)
+    nokogiri (1.5.5)
+    representable (1.2.8)
+      json
+      nokogiri
+    roar (0.11.4)
+      representable (>= 1.2.8)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  book_of_orcharding!
+  faraday
+  fruit_orchard!

@@ -6,12 +6,10 @@ class FruitsController < ApplicationController
 
   def index
     @fruits = Fruits.get("http://localhost:9292/fruits", 'application/json').fruits
-    #@fruits = Fruit.get("http://localhost:9292/fruits/2", 'application/json')
-    puts "===================="
-    @fruits
   end
 
   def edit
+    # id is actually url of the resource/fruit, see app/models/fruit
     @fruit = Fruit.get(params[:id], 'application/json')
   end
 

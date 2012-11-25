@@ -1,6 +1,6 @@
-Orcharding::Repositories.configure do |conf|
-  conf.register_fruit_repository Orcharding::FruitRepository
+FruitOrcharding::Repositories.configure do |conf|
+  conf.register_fruit_repository FruitOrcharding::FruitRepository
 end
 
-Orcharding::Seeder.load_from_json File.read("db/seed_data.json")
+FruitOrcharding::Seeder.load_from_json File.read("db/seed_data.json")
 

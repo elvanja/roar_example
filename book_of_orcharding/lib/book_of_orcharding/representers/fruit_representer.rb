@@ -1,10 +1,10 @@
 require 'roar/representer/json'
+require 'roar/representer/json/hal'
 require 'roar/representer/feature/hypermedia'
 
-module Orcharding
+module FruitOrcharding
   module FruitRepresenter
     include Roar::Representer::JSON::HAL
-    include Roar::Representer::Feature::Hypermedia
 
     property :id
     property :name

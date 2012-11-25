@@ -1,12 +1,13 @@
 require 'roar/representer/json'
+require 'roar/representer/json/hal'
 require 'roar/representer/feature/hypermedia'
 
-module Orcharding
+module FruitOrcharding
   module FruitsRepresenter
-    include Roar::Representer::JSON
+    include Roar::Representer::JSON::HAL
     include Roar::Representer::Feature::Hypermedia
 
-    collection :fruits, :extend => FruitRepresenter, :class => Fruit
+    collection :fruits, :extend => FruitRepresenter, :class => FruitOrcharding::Fruit
 
     def fruits
       collect

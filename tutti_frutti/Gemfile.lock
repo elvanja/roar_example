@@ -5,9 +5,9 @@ PATH
       roar
 
 PATH
-  remote: /home/elvanja/projects/test/roar-example/orchard
+  remote: /home/elvanja/projects/test/roar-example/fruit_orchard
   specs:
-    orchard (0.0.1)
+    fruit_orchard (0.0.1)
 
 GEM
   remote: https://rubygems.org/
@@ -162,10 +162,9 @@ PLATFORMS
 DEPENDENCIES
   book_of_orcharding!
   cucumber-rails
+  fruit_orchard!
   jquery-rails
-  orchard!
   rails (= 3.2.9)
   rails-api
-  roar
   roar-rails
   rspec-rails

@@ -1,0 +1,10 @@
+source 'https://rubygems.org'
+
+gem 'faraday'
+
+%w(
+  fruit_orchard
+  book_of_orcharding
+).each do |dependency|
+  gem dependency, :path => File.expand_path("../../#{dependency}", __FILE__)
+end

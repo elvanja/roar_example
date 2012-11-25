@@ -11,7 +11,13 @@ gem 'roar'
 gem 'roar-rails'
 gem 'faraday'
 gem 'active_attr'
-gem 'book_of_orcharding', :path => '../book_of_orcharding'
+
+%w(
+  fruit_orchard
+  book_of_orcharding
+).each do |dependency|
+  gem dependency, :path => File.expand_path("../../#{dependency}", __FILE__)
+end
 
 # Gems used only for assets and not required
 # in production environments by default.

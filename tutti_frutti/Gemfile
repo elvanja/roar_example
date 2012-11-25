@@ -7,12 +7,12 @@ gem 'rails', '3.2.9'
 
 gem 'rails-api'
 gem 'jquery-rails'
-gem 'roar'
+#gem 'roar'
 gem 'roar-rails'
 
 %w(
+  fruit_orchard
   book_of_orcharding
-  orchard
 ).each do |dependency|
   gem dependency, :path => File.expand_path("../../#{dependency}", __FILE__)
 end
