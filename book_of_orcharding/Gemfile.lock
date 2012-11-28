@@ -4,11 +4,6 @@ PATH
     book_of_orcharding (0.0.1)
       roar
 
-PATH
-  remote: ../fruit_orchard
-  specs:
-    fruit_orchard (0.0.1)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -48,7 +43,6 @@ PLATFORMS
 DEPENDENCIES
   book_of_orcharding!
   ci_reporter
-  fruit_orchard!
   json_spec
   rspec
   simplecov

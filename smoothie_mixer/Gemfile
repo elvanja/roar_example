@@ -12,8 +12,12 @@ gem 'roar-rails'
 gem 'faraday'
 gem 'active_attr'
 
+# TODO see if there is a way to decouple representer from Fruit class
+# don't require fruit_orchard, use only representations
+# this is because we have Fruit class in our namespace and in fruit orchard
+# if fruit orchard is required, it will take precedence over our class which has Rails related behaviour added
+
 %w(
-  fruit_orchard
   book_of_orcharding
 ).each do |dependency|
   gem dependency, :path => File.expand_path("../../#{dependency}", __FILE__)

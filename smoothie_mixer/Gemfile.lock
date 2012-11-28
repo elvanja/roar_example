@@ -4,11 +4,6 @@ PATH
     book_of_orcharding (0.0.1)
       roar
 
-PATH
-  remote: /home/elvanja/projects/roar_example/fruit_orchard
-  specs:
-    fruit_orchard (0.0.1)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -158,7 +153,6 @@ DEPENDENCIES
   book_of_orcharding!
   coffee-rails (~> 3.2.1)
   faraday
-  fruit_orchard!
   haml
   haml-rails
   jquery-rails

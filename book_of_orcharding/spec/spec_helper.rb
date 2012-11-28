@@ -20,13 +20,9 @@ if ENV["COVERAGE"]
 end
 # coverage setup end
 
-require "fruit_orchard"
-require 'book_of_orcharding'
-# require representers here, since they are not required in gem, see lib/book_of_orcharding.rb
-root = File.expand_path('../../lib', __FILE__)
-%w{representers}.each do |dir|
-  Dir["#{root}/book_of_orcharding/#{dir}/**/*.rb"].sort.each { |source| puts source; require source }
-end
+# TODO see if there is a way to decouple representer from Fruit class
+# don't require representers here, this would require Fruit class to be declared here too
+# see /lib/book_of_orcharding/representers/fruits_representer for details
 
 require 'json_spec'
 RSpec.configure do |config|
