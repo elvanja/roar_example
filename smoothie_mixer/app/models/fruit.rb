@@ -22,4 +22,3 @@ class Fruit
     find_by_id(param)
   end
 end
-

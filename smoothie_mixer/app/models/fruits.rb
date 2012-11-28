@@ -1,6 +1,6 @@
 require 'roar/representer/feature/client'
 
-class Fruits < OpenStruct
+class Fruits
   include Roar::Representer::Feature::HttpVerbs
 
   def initialize
@@ -9,4 +9,3 @@ class Fruits < OpenStruct
     transport_engine = Roar::Representer::Transport::Faraday
   end
 end
-
