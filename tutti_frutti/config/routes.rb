@@ -1,6 +1,8 @@
 TuttiFrutti::Application.routes.draw do
   resources :fruits
 
+  match "fruits/:id" => 'fruits#show', as: "fruit_orcharding_fruit"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -14,4 +14,10 @@ class FruitsController < ApplicationController
   def show
     respond_with FruitOrcharding::Fruit.find_by_id(params[:id])
   end
+
+  def create
+    # DISCUSS: the @fruit assignment is for testing, only. how can we access this particular instance in the test?
+    respond_with consume!(@fruit = FruitOrcharding::Fruit.create({}))
+
+  end
 end

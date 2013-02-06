@@ -2,6 +2,7 @@ module FruitOrcharding
   class Fruit
     extend RepositoryFactory
     include HashSerialization
+    extend ActiveModel::Naming
 
     attr_accessor :id, :name, :taste
 
