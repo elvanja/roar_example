@@ -16,8 +16,10 @@ class FruitsController < ApplicationController
   end
 
   def create
+    #puts "in create: #{request.formats}"
+    
     # DISCUSS: the @fruit assignment is for testing, only. how can we access this particular instance in the test?
-    respond_with consume!(@fruit = FruitOrcharding::Fruit.create({}))
-
+    @fruit = FruitOrcharding::Fruit.create({})
+    respond_with consume!(@fruit)
   end
 end

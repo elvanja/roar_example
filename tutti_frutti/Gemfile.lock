@@ -1,11 +1,11 @@
 PATH
-  remote: /home/elvanja/projects/roar_example/book_of_orcharding
+  remote: /home/nick/projects/roar_example/book_of_orcharding
   specs:
     book_of_orcharding (0.0.1)
       roar
 
 PATH
-  remote: /home/elvanja/projects/roar_example/fruit_orchard
+  remote: /home/nick/projects/roar_example/fruit_orchard
   specs:
     fruit_orchard (0.0.1)
 
@@ -71,7 +71,7 @@ GEM
     jquery-rails (2.1.3)
       railties (>= 3.1.0, < 5.0)
       thor (~> 0.14)
-    json (1.7.5)
+    json (1.7.6)
     libwebsocket (0.1.6.1)
       websocket
     mail (2.4.4)
@@ -80,7 +80,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.19)
     multi_json (1.3.7)
-    nokogiri (1.5.5)
+    nokogiri (1.5.6)
     polyglot (0.3.3)
     rack (1.4.1)
     rack-cache (1.2)
@@ -111,12 +111,12 @@ GEM
     rake (10.0.2)
     rdoc (3.12)
       json (~> 1.4)
-    representable (1.2.8)
+    representable (1.3.1)
       json
       nokogiri
-    roar (0.11.4)
+    roar (0.11.9)
       representable (>= 1.2.8)
-    roar-rails (0.0.10)
+    roar-rails (0.0.11)
       actionpack (~> 3.0)
       hooks
       railties (~> 3.0)
@@ -166,5 +166,6 @@ DEPENDENCIES
   jquery-rails
   rails (= 3.2.9)
   rails-api
-  roar-rails
+  roar (>= 0.11.9)
+  roar-rails (>= 0.0.11)
   rspec-rails
