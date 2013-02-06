@@ -11,7 +11,7 @@ module FruitOrcharding
     property :taste
 
     link :self do
-      fruit_url(self.id)
+      fruit_url(id)
     end
   end
 end

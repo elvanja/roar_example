@@ -7,8 +7,8 @@ gem 'rails', '3.2.9'
 
 gem 'rails-api'
 gem 'jquery-rails'
-#gem 'roar'
-gem 'roar-rails'
+gem 'roar', ">= 0.11.9"
+gem 'roar-rails', ">= 0.0.11"
 
 %w(
   fruit_orchard

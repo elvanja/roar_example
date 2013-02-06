@@ -1,4 +1,10 @@
 PATH
+  remote: ../../roar
+  specs:
+    roar (0.11.9)
+      representable (>= 1.2.8)
+
+PATH
   remote: ../book_of_orcharding
   specs:
     book_of_orcharding (0.0.1)
@@ -106,11 +112,9 @@ GEM
     rake (10.0.2)
     rdoc (3.12)
       json (~> 1.4)
-    representable (1.2.8)
+    representable (1.3.1)
       json
       nokogiri
-    roar (0.11.4)
-      representable (>= 1.2.8)
     roar-rails (0.0.10)
       actionpack (~> 3.0)
       hooks
@@ -158,7 +162,7 @@ DEPENDENCIES
   jquery-rails
   less-rails
   rails (= 3.2.9)
-  roar
+  roar!
   roar-rails
   sass-rails (~> 3.2.3)
   therubyracer

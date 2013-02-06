@@ -19,9 +19,11 @@ class FruitsController < ApplicationController
 
   # TODO: finish up posting, is fruit posting itself, or to fruits collection?
   def create
-    fruit = Fruit.new(params)
-    fruits = Fruits.get("http://localhost:9292/fruits", 'application/json').fruits
-    fruits << fruit
+    fruit = Fruit.new(params[:fruit])
+    #fruits = Fruits.get("http://localhost:9292/fruits", 'application/json').fruits
+    #fruits << fruit
+
+    fruit.post("http://localhost:9292/fruits", 'application/json')
     #fruits.post(fruits.links[:self])
     redirect_to fruits_path, notice: "May you have a mouthfull of #{fruit.name}"
   end

@@ -1,13 +1,15 @@
 require 'roar/representer/feature/client'
+#require 'roar/representer/transport/faraday'
 
-class Fruit
-  include Roar::Representer::Feature::HttpVerbs
+class Fruit < OpenStruct
+  #include Roar::Representer::Feature::HttpVerbs
   include ActiveAttr::Model
 
   def initialize(*)
     extend FruitOrcharding::FruitRepresenter
     extend Roar::Representer::Feature::Client
-    transport_engine = Roar::Representer::Transport::Faraday
+    #transport_engine = Roar::Representer::Transport::Faraday
+    super
   end
 
   def url
