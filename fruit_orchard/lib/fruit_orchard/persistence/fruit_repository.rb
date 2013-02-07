@@ -12,7 +12,7 @@ module FruitOrcharding
       end
 
       def find_by_id(id)
-        all.select {|fruit| fruit[:id] == id}.first
+        all.find {|fruit| fruit[:id] == id}
       end
 
       def find_by_taste(taste)
@@ -20,12 +20,14 @@ module FruitOrcharding
       end
 
       def create(data)
+        data = HashUtils.symbolize_keys(data)
         data[:id] = (0..10).map {KEYGEN_DATA[rand(KEYGEN_DATA.length)]}.join
         all << data
         data
       end
 
       def update(data)
+        data = HashUtils.symbolize_keys(data)
         fruit = find_by_id(data[:id])
         fruit.update(data) and return fruit if fruit
         nil

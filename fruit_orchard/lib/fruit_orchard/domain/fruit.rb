@@ -11,7 +11,7 @@ module FruitOrcharding
     end
 
     def update(params = {})
-      from_hash params.reject {|param, value| [:id].include?(param)}
+      from_hash params.reject {|param, value| [:id].include?(param.to_sym)}
       self.class.repository.update to_hash
     end
 
