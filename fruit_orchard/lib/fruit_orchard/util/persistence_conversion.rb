@@ -9,12 +9,12 @@ module FruitOrcharding
 
     module ClassMethods
       def new_from_hash(hash)
-        self.new.from_hash hash
+        self.new.me_from_hash hash
       end
     end
 
     module InstanceMethods
-      def from_hash(hash)
+      def me_from_hash(hash)
         return unless hash
         hash.each do |key, value|
           variable = "@#{key}".to_sym
@@ -24,7 +24,7 @@ module FruitOrcharding
         self
       end
 
-      def to_hash
+      def me_to_hash
         hash = {}
         self.instance_variables.each do |variable|
           variable = variable.to_s.gsub('@', '')

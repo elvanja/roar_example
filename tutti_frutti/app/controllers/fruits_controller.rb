@@ -19,9 +19,9 @@ class FruitsController < ApplicationController
     #puts "in create: #{request.formats}"
     
     # DISCUSS: the @fruit assignment is for testing, only. how can we access this particular instance in the test?
-    @fruit = FruitOrcharding::Fruit.create({})  # get a new instance
-    consume!(@fruit)                            # fill it with new data
-    @fruit.update                               # save changes
+    @fruit = FruitOrcharding::Fruit.new          # create a new instance
+    consume!(@fruit)                             # fill it with data
+    @fruit.create                                # save changes
     respond_with @fruit
   end
 end

@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'active_model'
 
 module FruitOrcharding
   describe Fruit do
@@ -53,6 +54,13 @@ module FruitOrcharding
         fruit_hash = data_hash.merge({id: 100})
         repository.should_receive(:create).with(data_hash).and_return(fruit_hash)
         Fruit.create(data_hash).should be_equal_to_hash(fruit_hash)
+      end
+
+      it "creates a new fruit using fruit itself" do
+        fruit_hash = {name: 'Apple', taste: 'sweet'}
+        repository.should_receive(:create).with(fruit_hash)
+        fruit = Fruit.new(fruit_hash)
+        fruit.create
       end
     end
 

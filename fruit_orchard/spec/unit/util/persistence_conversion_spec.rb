@@ -63,7 +63,7 @@ module FruitOrcharding
           test.id = 100
           test.name = 'test'
 
-          test.to_hash.should == {id: 100, name: 'test'}
+          test.me_to_hash.should == {id: 100, name: 'test'}
         end
       end
     end

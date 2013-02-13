@@ -2,17 +2,21 @@ module FruitOrcharding
   class Fruit
     extend RepositoryFactory
     include HashSerialization
-    extend ActiveModel::Naming
+    extend ActiveModel::Naming # needed for rails in tutti_frutti, should not be here !!!
 
     attr_accessor :id, :name, :taste
 
     def initialize(params = {})
-      from_hash params
+      me_from_hash params
     end
 
     def update(params = {})
-      from_hash params.reject {|param, value| [:id].include?(param.to_sym)}
-      self.class.repository.update to_hash
+      me_from_hash params.reject {|param, value| [:id].include?(param.to_sym)}
+      self.class.repository.update me_to_hash
+    end
+
+    def create
+      me_from_hash(self.class.repository.create(me_to_hash))
     end
 
     class << self
